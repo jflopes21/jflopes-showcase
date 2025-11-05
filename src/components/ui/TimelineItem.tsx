@@ -26,7 +26,7 @@ export function TimelineItem({
 
   return (
     <div
-      className={`relative flex min-h-[300px] w-full justify-between gap-8 md:gap-16 ${isRight ? 'flex-row' : 'flex-row-reverse'}`}
+      className={`relative flex min-h-[300px] w-full justify-between gap-8 md:gap-16 ${isRight ? 'flex-row' : 'flex-row-reverse'} mb-8 md:mb-0`}
     >
       <motion.div
         className="w-full rounded-xl border border-lime-400/20 bg-neutral-900 p-6 shadow-xl md:w-5/12"

@@ -9,6 +9,7 @@ import {
   CONTACT_TEXTS,
 } from '@/constants/contact-data.constants';
 import { toast } from 'sonner';
+import GradientText from '../ui/GradientText';
 
 interface LinkAction {
   type: 'link' | 'copy';
@@ -88,7 +89,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="flex w-full flex-col items-center p-8 py-40"
+      className="flex w-full flex-col items-center p-8 py-80"
     >
       <motion.div
         className="w-full max-w-4xl"
@@ -97,12 +98,15 @@ export function ContactSection() {
         transition={{ ...floatIn.transition, delay: 0.1 }}
         viewport={floatIn.viewport}
       >
-        <h2 className="mb-10 text-center text-4xl font-bold text-white">
+        <GradientText
+          colors={['#a3e63e', '#10b981']}
+          animationSpeed={3}
+          showBorder={false}
+          className="mb-6 text-center text-5xl font-bold"
+        >
           {CONTACT_TEXTS.CTA}
-        </h2>
-        <p className="mb-16 text-center text-xl text-neutral-400">
-          {CONTACT_TEXTS.SUPPORT}
-        </p>
+        </GradientText>
+        <p className="mb-14 text-center text-xl">{CONTACT_TEXTS.SUPPORT}</p>
 
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {contactLinks.map((link, index) => (
@@ -117,7 +121,7 @@ export function ContactSection() {
                   handleAction(link);
                 }
               }}
-              className="flex flex-col items-center justify-center space-y-3 rounded-xl border border-neutral-700/50 bg-neutral-900/50 p-6 text-lime-400 transition-all hover:border-lime-400/50 hover:bg-lime-500/10"
+              className="flex flex-col items-center justify-center space-y-3 rounded-xl border border-lime-400/50 bg-neutral-900/50 p-6 text-white transition-all hover:border-lime-400/50 hover:bg-lime-500/10"
               initial={{ scale: 0.9 }}
               whileInView={{ scale: 1 }}
               whileHover={{ scale: 1.05 }}

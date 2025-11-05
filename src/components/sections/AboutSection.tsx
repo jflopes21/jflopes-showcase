@@ -16,7 +16,7 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="mx-auto mt-40 grid max-w-6xl grid-cols-1 items-start gap-24 p-8 py-40 md:grid-cols-2"
+      className="mx-auto mt-60 grid max-w-6xl grid-cols-1 items-start gap-24 p-8 py-40 md:grid-cols-2"
     >
       <motion.div
         className="flex h-full w-full justify-center"

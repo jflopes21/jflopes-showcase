@@ -1,4 +1,5 @@
 'use client';
+import { Header } from '@/components/common/Header';
 import { ScrollIndicator } from '@/components/common/ScrollIndicator';
 import { AboutSection } from '@/components/sections/AboutSection';
 import { ContactSection } from '@/components/sections/ContactSection';
@@ -11,6 +12,8 @@ import Particles from '@/components/ui/Particles';
 export default function Home() {
   return (
     <main className="relative flex flex-col items-center">
+      <Header />
+
       <div className="fixed inset-0 z-0 h-full w-full">
         <Particles
           particleColors={['#10b981']}
