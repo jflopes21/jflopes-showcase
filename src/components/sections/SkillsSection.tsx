@@ -4,49 +4,9 @@ import { motion } from 'framer-motion';
 import GradientText from '@/components/ui/GradientText';
 import LogoLoop from '@/components/ui/LogoLoop';
 import {
-  SiReact,
-  SiTypescript,
-  SiJavascript,
-  SiHtml5,
-  SiCss3,
-  SiTailwindcss,
-  SiShadcnui,
-  SiChakraui,
-  SiNodedotjs,
-  SiNestjs,
-  SiPhp,
-  SiPostgresql,
-  SiMysql,
-  SiGit,
-  SiDocker,
-  SiSalesforce,
-  SiMongodb,
-  SiGithub,
-} from 'react-icons/si';
-
-const skillsLogos = [
-  { node: <SiReact />, title: 'React' },
-  { node: <SiTypescript />, title: 'TypeScript' },
-  { node: <SiJavascript />, title: 'JavaScript' },
-  { node: <SiTailwindcss />, title: 'Tailwind CSS' },
-  { node: <SiShadcnui />, title: 'Shadcn UI' },
-  { node: <SiChakraui />, title: 'Chakra UI' },
-  { node: <SiHtml5 />, title: 'HTML5' },
-  { node: <SiCss3 />, title: 'CSS3' },
-  { node: <SiNodedotjs />, title: 'Node.js' },
-  { node: <SiNestjs />, title: 'NestJS' },
-  { node: <SiPhp />, title: 'PHP' },
-  { node: <SiSalesforce />, title: 'Salesforce (Apex)' },
-];
-
-const infraestructureLogos = [
-  { node: <SiPostgresql />, title: 'PostgreSQL' },
-  { node: <SiGit />, title: 'Git' },
-  { node: <SiGithub />, title: 'Github' },
-  { node: <SiDocker />, title: 'Docker' },
-  { node: <SiMysql />, title: 'MySQL' },
-  { node: <SiMongodb />, title: 'MongoDB' },
-];
+  SKILLS_LOGOS,
+  INFRASTRUCTURE_LOGOS,
+} from '@/constants/skills-data.constants';
 
 export function SkillsSection() {
   const floatIn = {
@@ -79,7 +39,7 @@ export function SkillsSection() {
           <div className="flex flex-col gap-8">
             <div className="relative z-10 h-24 w-full">
               <LogoLoop
-                logos={skillsLogos}
+                logos={SKILLS_LOGOS}
                 speed={100}
                 direction="left"
                 logoHeight={48}
@@ -93,15 +53,15 @@ export function SkillsSection() {
 
             <div className="relative z-10 h-24 w-full">
               <LogoLoop
-                logos={infraestructureLogos}
+                logos={INFRASTRUCTURE_LOGOS}
                 speed={100}
                 direction="right"
                 logoHeight={48}
                 gap={60}
                 scaleOnHover
                 pauseOnHover={false}
-                ariaLabel="Tecnologias de infraestrutura utilizadas"
                 fadeOut
+                ariaLabel="Tecnologias de infraestrutura utilizadas"
               />
             </div>
           </div>

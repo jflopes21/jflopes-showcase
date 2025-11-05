@@ -1,6 +1,9 @@
 'use client';
 import { ScrollIndicator } from '@/components/common/ScrollIndicator';
 import { AboutSection } from '@/components/sections/AboutSection';
+import { ContactSection } from '@/components/sections/ContactSection';
+import { EducationSection } from '@/components/sections/EducationSection';
+import { ExperienceSection } from '@/components/sections/ExperienceSection';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { SkillsSection } from '@/components/sections/SkillsSection';
 import Particles from '@/components/ui/Particles';
@@ -25,6 +28,9 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <SkillsSection />
+        <ExperienceSection />
+        <EducationSection />
+        <ContactSection />
       </div>
 
       <ScrollIndicator />

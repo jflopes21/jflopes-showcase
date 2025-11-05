@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const SECTION_IDS = ['about', 'skills', 'experience', 'contact'];
+const SECTION_IDS = ['about', 'skills', 'experience','education', 'contact'];
 
 export function ScrollIndicator() {
   const [isVisible, setIsVisible] = useState(false);

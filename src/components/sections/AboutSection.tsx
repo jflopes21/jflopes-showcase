@@ -3,12 +3,9 @@
 import { motion } from 'framer-motion';
 import GradientText from '@/components/ui/GradientText';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
-import { Button } from '../ui/button';
+import { RESUME_TEXT, SOCIAL_LINKS } from '@/constants/about-section.constants';
 
 export function AboutSection() {
-  const resumeText =
-    'Desenvolvedor Full Stack com experiência na criação de soluções web e mobile escaláveis utilizando React, React Native e Node.js (NestJS). Sou um profissional proativo, com grande capacidade de aprendizado e adaptação a novas tecnologias e desafios de backend e frontend. Focado em desenvolver produtos que geram impacto positivo e melhoram a experiência do usuário, atuando de forma colaborativa em ambientes ágeis.';
-
   const floatIn = {
     initial: { opacity: 0, y: 50 },
     whileInView: { opacity: 1, y: 0 },
@@ -69,12 +66,12 @@ export function AboutSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          {resumeText}
+          {RESUME_TEXT}
         </motion.p>
 
         <div className="flex space-x-6">
           <motion.a
-            href="https://github.com/jflopes21"
+            href={SOCIAL_LINKS.github}
             target="_blank"
             rel="noopener noreferrer"
             className="text-white transition-transform duration-200"
@@ -84,7 +81,7 @@ export function AboutSection() {
           </motion.a>
 
           <motion.a
-            href="https://www.linkedin.com/in/joão-francisco-perassoli-lopes-42b1581a3"
+            href={SOCIAL_LINKS.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="text-white transition-transform duration-200"
