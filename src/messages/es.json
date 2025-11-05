@@ -1,0 +1,60 @@
+{
+  "Navigation": {
+    "home": "Inicio",
+    "about": "Acerca",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "education": "Formación",
+    "contact": "Contacto"
+  },
+  "HeroSection": {
+    "greeting": "Hola, soy",
+    "titles": ["Desarrollador Full Stack", "Ingeniero de Software"]
+  },
+  "AboutSection": {
+    "title": "Acerca de Mí",
+    "resumeText": "Desarrollador Full Stack con experiencia en la creación de soluciones web y móviles escalables utilizando React, React Native y Node.js (NestJS). Soy un profesional proactivo, con gran capacidad de aprendizaje y adaptación a nuevas tecnologías y desafíos de backend y frontend. Centrado en desarrollar productos que generen un impacto positivo y mejoren la experiencia del usuario, trabajando de forma colaborativa en entornos ágiles."
+  },
+  "SkillsSection": {
+    "title": "Tecnologías & Habilidades",
+    "devAriaLabel": "Tecnologías de desarrollo utilizadas",
+    "infraAriaLabel": "Tecnologías de infraestructura utilizadas"
+  },
+  "ExperienceSection": {
+    "title": "Experiencia Profesional",
+    "gazin_role": "Desarrollador Full Stack",
+    "gazin_period": "Agosto 2024 – Presente",
+    "gazin_achieve1": "Desarrollo de un sistema escalable de análisis/cobranza de crédito (NestJS/React).",
+    "gazin_achieve2": "Desarrollo de un sistema de asistencia postventa (PHP/React).",
+    "gazin_achieve3": "Actuación y consumo en APIs RESTful.",
+    "gazin_achieve4": "Colaboración en equipos ágiles (Scrum/Kanban).",
+    "rom_role": "Desarrollador de Software",
+    "rom_period": "Septiembre 2020 – Agosto 2024",
+    "rom_achieve1": "Desarrollo y mantenimiento de aplicaciones web internas (React/Node.js).",
+    "rom_achieve2": "Personalización y desarrollo en la plataforma Salesforce (Apex).",
+    "rom_achieve3": "Mantenimiento y modernización de sistemas heredados.",
+    "rom_achieve4": "Soporte técnico especializado a usuarios."
+  },
+  "EducationSection": {
+    "title": "Formación & Certificados",
+    "academic_subtitle": "Académica",
+    "extra_subtitle": "Idiomas & Cursos Adicionales",
+    "academic_software_eng": "Ingeniería de Software | Grado",
+    "extra_english_title": "Inglés: Nivel Fluido",
+    "extra_english_detail": "Dominio completo del idioma, centrado en la conversación técnica.",
+    "extra_fullstack_title": "Desarrollo Full Stack Moderno",
+    "extra_fullstack_detail": "Cursos y eventos de inmersión que cubren HTML, CSS, JS, TS, React, Node.js, Next.js y NestJS."
+  },
+  "ContactSection": {
+    "title": "Contactar",
+    "cta": "¿Vamos a Construir el Próximo Proyecto?",
+    "support": "Ponte en contacto para discutir proyectos y oportunidades.",
+    "email_display": "Correo",
+    "phone_display": "Teléfono",
+    "github_name": "GitHub",
+    "linkedin_name": "LinkedIn"
+  },
+  "Global": {
+    "copied": "{item} copiado!"
+  }
+}

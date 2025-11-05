@@ -1,0 +1,60 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "HeroSection": {
+    "greeting": "Hi, I'm",
+    "titles": ["Full Stack Developer", "Software Engineer"]
+  },
+  "AboutSection": {
+    "title": "About Me",
+    "resumeText": "Full Stack Developer with experience in creating scalable web and mobile solutions using React, React Native, and Node.js (NestJS). I am a proactive professional, highly capable of learning and adapting to new technologies and challenges in both backend and frontend. Focused on developing products that generate positive impact and improve user experience, working collaboratively in agile environments."
+  },
+  "SkillsSection": {
+    "title": "Technologies & Skills",
+    "devAriaLabel": "Development technologies used",
+    "infraAriaLabel": "Infrastructure technologies used"
+  },
+  "ExperienceSection": {
+    "title": "Professional Experience",
+    "gazin_role": "Full Stack Developer",
+    "gazin_period": "August 2024 – Present",
+    "gazin_achieve1": "Development of scalable credit analysis/collection system (NestJS/React).",
+    "gazin_achieve2": "Development of post-sales assistance system (PHP/React).",
+    "gazin_achieve3": "Work with and consumption of RESTful APIs.",
+    "gazin_achieve4": "Collaboration in agile teams (Scrum/Kanban).",
+    "rom_role": "Software Developer",
+    "rom_period": "September 2020 – August 2024",
+    "rom_achieve1": "Development and maintenance of internal web applications (React/Node.js).",
+    "rom_achieve2": "Customization and development on the Salesforce platform (Apex).",
+    "rom_achieve3": "Maintenance and modernization of legacy systems.",
+    "rom_achieve4": "Specialized technical support to users."
+  },
+  "EducationSection": {
+    "title": "Education & Certificates",
+    "academic_subtitle": "Academic",
+    "extra_subtitle": "Languages & Additional Courses",
+    "academic_software_eng": "Software Engineering | Graduation",
+    "extra_english_title": "English: Fluent Level",
+    "extra_english_detail": "Full proficiency in the language, focused on technical conversation.",
+    "extra_fullstack_title": "Modern Full Stack Development",
+    "extra_fullstack_detail": "Courses and immersion events covering HTML, CSS, JS, TS, React, Node.js, Next.js, and NestJS."
+  },
+  "ContactSection": {
+    "title": "Get in Touch",
+    "cta": "Shall We Build the Next Project?",
+    "support": "Get in touch to discuss projects and opportunities.",
+    "email_display": "Email",
+    "phone_display": "Phone",
+    "github_name": "GitHub",
+    "linkedin_name": "LinkedIn"
+  },
+  "Global": {
+    "copied": "{item} copied!"
+  }
+}

@@ -4,11 +4,15 @@ import SplitText from '@/components/ui/SplitText';
 import GradientText from '@/components/ui/GradientText';
 import TextType from '@/components/ui/TextType';
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 export function HeroSection() {
+  const t = useTranslations('HeroSection');
+
   const NAME_FULL = 'João Francisco P. Lopes';
   const NAME_SHORT = 'João Lopes';
   const [displayName, setDisplayName] = useState(NAME_FULL);
+
   useEffect(() => {
     const handleResize = () => {
       const isMobile = window.matchMedia('(max-width: 1023px)').matches;
@@ -32,7 +36,7 @@ export function HeroSection() {
         <div className="flex flex-col items-center gap-2 md:flex-row md:items-baseline md:gap-4">
           <SplitText
             tag="h1"
-            text="Olá, eu sou"
+            text={t('greeting')}
             className="text-center text-3xl font-medium text-white md:text-5xl lg:text-6xl"
             from={{ y: 20, opacity: 0 }}
             to={{ y: 0, opacity: 1 }}
@@ -51,7 +55,7 @@ export function HeroSection() {
         </div>
 
         <TextType
-          text={['Desenvolvedor Full Stack', 'Engenheiro de Software']}
+          text={t.raw('titles')}
           typingSpeed={60}
           pauseDuration={600}
           showCursor={true}

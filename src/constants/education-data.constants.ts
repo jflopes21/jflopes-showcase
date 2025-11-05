@@ -1,34 +1,33 @@
 interface EducationItem {
-  titulo: string;
+  tituloKey: string;
   instituicao: string;
   periodo?: string;
-  detalhe?: string;
+  detalheKey?: string;
 }
 
 /**
- * @description Dados da formação acadêmica principal.
+ * @description Dados da formação acadêmica principal, com chaves de tradução para título e detalhes.
  */
 export const ACADEMIC_DATA: EducationItem[] = [
   {
-    titulo: 'Engenharia de Software | Graduação',
+    tituloKey: 'academic_software_eng',
     instituicao: 'UniCesumar, Maringá, PR',
     periodo: '2020 – 2025',
   },
 ];
 
 /**
- * @description Dados adicionais de idiomas e cursos relevantes.
+ * @description Dados adicionais de idiomas e cursos relevantes, com chaves de tradução para título e detalhes.
  */
 export const EXTRA_EDUCATION_DATA: EducationItem[] = [
   {
-    titulo: 'Inglês: Nível Fluente',
+    tituloKey: 'extra_english_title',
     instituicao: 'FISK (2014 - 2018)',
-    detalhe: 'Proficiência completa no idioma, focado em conversação técnica.',
+    detalheKey: 'extra_english_detail',
   },
   {
-    titulo: 'Desenvolvimento Full Stack Moderno',
+    tituloKey: 'extra_fullstack_title',
     instituicao: 'Rocketseat',
-    detalhe:
-      'Cursos e eventos de imersão cobrindo HTML, CSS, JS, TS, React, Node.js, Next.js e NestJS.',
+    detalheKey: 'extra_fullstack_detail',
   },
 ];

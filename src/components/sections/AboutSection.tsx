@@ -3,9 +3,12 @@
 import { motion } from 'framer-motion';
 import GradientText from '@/components/ui/GradientText';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
-import { RESUME_TEXT, SOCIAL_LINKS } from '@/constants/about-section.constants';
+import { SOCIAL_LINKS } from '@/constants/about-section.constants';
+import { useTranslations } from 'next-intl';
 
 export function AboutSection() {
+  const t = useTranslations('AboutSection');
+
   const floatIn = {
     initial: { opacity: 0, y: 50 },
     whileInView: { opacity: 1, y: 0 },
@@ -56,7 +59,7 @@ export function AboutSection() {
           showBorder={false}
           className="text-5xl font-bold"
         >
-          Sobre Mim
+          {t('title')}
         </GradientText>
 
         <motion.p
@@ -66,7 +69,7 @@ export function AboutSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          {RESUME_TEXT}
+          {t('resumeText')}
         </motion.p>
 
         <div className="flex space-x-6">

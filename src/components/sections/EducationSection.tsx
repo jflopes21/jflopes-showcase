@@ -7,8 +7,11 @@ import {
   ACADEMIC_DATA,
   EXTRA_EDUCATION_DATA,
 } from '@/constants/education-data.constants';
+import { useTranslations } from 'next-intl';
 
 export function EducationSection() {
+  const t = useTranslations('EducationSection');
+
   const floatIn = {
     initial: { opacity: 0, y: 50 },
     whileInView: { opacity: 1, y: 0 },
@@ -34,30 +37,38 @@ export function EducationSection() {
           showBorder={false}
           className="mb-16 text-center text-5xl font-bold"
         >
-          Formação & Certificados
+          {t('title')}
         </GradientText>
 
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           <div>
             <h2 className="mb-6 border-b border-neutral-700/50 pb-2 text-3xl font-bold text-white">
-              Acadêmica
+              {t('academic_subtitle')}
             </h2>
             <div className="space-y-8">
               {ACADEMIC_DATA.map((item, index) => (
-                <Card key={index} {...item} index={index} />
+                <Card
+                  key={index}
+                  titulo={t(item.tituloKey)}
+                  instituicao={item.instituicao}
+                  periodo={item.periodo}
+                  index={index}
+                />
               ))}
             </div>
           </div>
 
           <div className="mt-8 md:mt-0">
             <h2 className="mb-6 border-b border-neutral-700/50 pb-2 text-3xl font-bold text-white">
-              Idiomas & Cursos Adicionais
+              {t('extra_subtitle')}
             </h2>
             <div className="space-y-8">
               {EXTRA_EDUCATION_DATA.map((item, index) => (
                 <Card
                   key={index}
-                  {...item}
+                  titulo={t(item.tituloKey)}
+                  instituicao={item.instituicao}
+                  detalhe={item.detalheKey ? t(item.detalheKey) : undefined}
                   index={index + ACADEMIC_DATA.length}
                 />
               ))}

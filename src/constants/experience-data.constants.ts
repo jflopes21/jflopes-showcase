@@ -1,38 +1,38 @@
 interface ExperienceItem {
   empresa: string;
-  cargo: string;
-  periodo: string;
+  cargoKey: string;
+  periodoKey: string;
   stack: string;
-  conquistas: string[];
+  conquistasKeys: string[];
 }
 
 /**
- * @description Dados detalhados de experiência profissional, listados do mais antigo para o mais recente.
+ * @description Dados detalhados de experiência profissional, listados do mais antigo para o mais recente, usando chaves de tradução.
  */
 export const EXPERIENCE_DATA: ExperienceItem[] = [
   {
     empresa: 'Romagnole Produtos Elétricos S.A. | Mandaguari, PR',
-    cargo: 'Desenvolvedor de Software',
-    periodo: 'Setembro 2020 – Agosto 2024',
+    cargoKey: 'rom_role',
+    periodoKey: 'rom_period',
     stack: 'React.js, Node.js, Salesforce (Apex), UNIFACE',
-    conquistas: [
-      'Desenvolvimento e manutenção de aplicações web internas (React/Node.js).',
-      'Customização e desenvolvimento na plataforma Salesforce (Apex).',
-      'Manutenção e modernização de sistemas legados.',
-      'Suporte técnico especializado a usuários.',
+    conquistasKeys: [
+      'rom_achieve1',
+      'rom_achieve2',
+      'rom_achieve3',
+      'rom_achieve4',
     ],
   },
   {
     empresa: 'Gazin | Maringá, PR',
-    cargo: 'Desenvolvedor Full Stack',
-    periodo: 'Agosto 2024 – Presente',
+    cargoKey: 'gazin_role',
+    periodoKey: 'gazin_period',
     stack:
       'NestJS, React, TailwindCSS, Shadcn UI, PHP, Chakra UI, APIs RESTful',
-    conquistas: [
-      'Desenvolvimento de sistema de análise de crédito/cobrança (NestJS/React) escalável.',
-      'Desenvolvimento de sistema de assistência de pós-vendas (PHP/React).',
-      'Atuação e consumo em APIs RESTful.',
-      'Colaboração em times ágeis (Scrum/Kanban).',
+    conquistasKeys: [
+      'gazin_achieve1',
+      'gazin_achieve2',
+      'gazin_achieve3',
+      'gazin_achieve4',
     ],
   },
 ];

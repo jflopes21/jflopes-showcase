@@ -6,56 +6,60 @@ import { SiGithub, SiLinkedin } from 'react-icons/si';
 import {
   CONTACT_INFO,
   SOCIAL_LINKS,
-  CONTACT_TEXTS,
+  CONTACT_KEYS,
 } from '@/constants/contact-data.constants';
 import { toast } from 'sonner';
 import GradientText from '../ui/GradientText';
+import { useTranslations } from 'next-intl';
 
 interface LinkAction {
   type: 'link' | 'copy';
   url?: string;
   textToCopy?: string;
-  display?: string;
+  displayKey?: string;
 }
 
 interface ContactLink {
   icon: React.ReactNode;
-  name: string;
+  nameKey: string;
   action: LinkAction;
 }
 
-const contactLinks: ContactLink[] = [
-  {
-    icon: <SiGithub size={32} />,
-    name: 'GitHub',
-    action: { type: 'link', url: SOCIAL_LINKS.GITHUB },
-  },
-  {
-    icon: <SiLinkedin size={32} />,
-    name: 'LinkedIn',
-    action: { type: 'link', url: SOCIAL_LINKS.LINKEDIN },
-  },
-  {
-    icon: <Mail size={32} />,
-    name: 'E-mail',
-    action: {
-      type: 'copy',
-      textToCopy: CONTACT_INFO.EMAIL,
-      display: CONTACT_INFO.EMAIL_DISPLAY,
-    },
-  },
-  {
-    icon: <Phone size={32} />,
-    name: 'Telefone',
-    action: {
-      type: 'copy',
-      textToCopy: CONTACT_INFO.PHONE,
-      display: CONTACT_INFO.PHONE_DISPLAY,
-    },
-  },
-];
-
 export function ContactSection() {
+  const t = useTranslations('ContactSection');
+  const tGlobal = useTranslations('Global');
+
+  const contactLinks: ContactLink[] = [
+    {
+      icon: <SiGithub size={32} />,
+      nameKey: CONTACT_KEYS.GITHUB_NAME,
+      action: { type: 'link', url: SOCIAL_LINKS.GITHUB },
+    },
+    {
+      icon: <SiLinkedin size={32} />,
+      nameKey: CONTACT_KEYS.LINKEDIN_NAME,
+      action: { type: 'link', url: SOCIAL_LINKS.LINKEDIN },
+    },
+    {
+      icon: <Mail size={32} />,
+      nameKey: CONTACT_KEYS.EMAIL_DISPLAY,
+      action: {
+        type: 'copy',
+        textToCopy: CONTACT_INFO.EMAIL,
+        displayKey: CONTACT_KEYS.EMAIL_DISPLAY,
+      },
+    },
+    {
+      icon: <Phone size={32} />,
+      nameKey: CONTACT_KEYS.PHONE_DISPLAY,
+      action: {
+        type: 'copy',
+        textToCopy: CONTACT_INFO.PHONE,
+        displayKey: CONTACT_KEYS.PHONE_DISPLAY,
+      },
+    },
+  ];
+
   const floatIn = {
     initial: { opacity: 0, y: 50 },
     whileInView: { opacity: 1, y: 0 },
@@ -65,7 +69,7 @@ export function ContactSection() {
 
   const handleCopy = (text: string, itemName: string) => {
     navigator.clipboard.writeText(text);
-    toast.success(`${itemName} copiado!`, {
+    toast.success(`${tGlobal('copied', { item: itemName })}`, {
       description: text,
       className: 'border-lime-400 bg-neutral-900 text-white',
       style: {
@@ -82,7 +86,8 @@ export function ContactSection() {
     if (link.action.type === 'link' && link.action.url) {
       window.open(link.action.url, '_blank');
     } else if (link.action.type === 'copy' && link.action.textToCopy) {
-      handleCopy(link.action.textToCopy, link.name);
+      const itemName = t(link.nameKey);
+      handleCopy(link.action.textToCopy, itemName);
     }
   };
 
@@ -104,9 +109,9 @@ export function ContactSection() {
           showBorder={false}
           className="mb-6 text-center text-5xl font-bold"
         >
-          {CONTACT_TEXTS.CTA}
+          {t(CONTACT_KEYS.CTA)}
         </GradientText>
-        <p className="mb-14 text-center text-xl">{CONTACT_TEXTS.SUPPORT}</p>
+        <p className="mb-14 text-center text-xl">{t(CONTACT_KEYS.SUPPORT)}</p>
 
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {contactLinks.map((link, index) => (
@@ -130,7 +135,12 @@ export function ContactSection() {
             >
               <div className="text-4xl">{link.icon}</div>
               <p className="text-sm font-semibold">
-                {link.action.type === 'copy' ? link.action.display : link.name}
+                {/* Se for link, mostra o nome (GitHub/LinkedIn), senão, mostra o display (E-mail/Telefone) */}
+                {t(
+                  link.action.type === 'copy'
+                    ? link.action.displayKey!
+                    : link.nameKey
+                )}
               </p>
             </motion.a>
           ))}

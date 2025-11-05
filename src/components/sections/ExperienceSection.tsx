@@ -4,8 +4,11 @@ import GradientText from '@/components/ui/GradientText';
 import { TimelineItem } from '@/components/ui/TimelineItem';
 import { motion } from 'framer-motion';
 import { EXPERIENCE_DATA } from '@/constants/experience-data.constants';
+import { useTranslations } from 'next-intl';
 
 export function ExperienceSection() {
+  const t = useTranslations('ExperienceSection');
+
   const floatIn = {
     initial: { opacity: 0, y: 50 },
     whileInView: { opacity: 1, y: 0 },
@@ -31,7 +34,7 @@ export function ExperienceSection() {
           showBorder={false}
           className="mb-16 text-center text-5xl font-bold"
         >
-          Experiência Profissional
+          {t('title')}
         </GradientText>
 
         <div className="relative">
@@ -45,16 +48,16 @@ export function ExperienceSection() {
             >
               <div className="mb-2">
                 <h3 className="text-xl font-bold text-white">{item.empresa}</h3>
-                <p className="text-sm text-neutral-400">{item.periodo}</p>
+                <p className="text-sm text-neutral-400">{t(item.periodoKey)}</p>
               </div>
               <p className="mb-4 text-lg font-medium text-lime-400">
-                {item.cargo}
+                {t(item.cargoKey)}
               </p>
 
               <div className="text-muted-foreground space-y-2">
                 <ul className="list-disc pl-5">
-                  {item.conquistas.map((conquista, idx) => (
-                    <li key={idx}>{conquista}</li>
+                  {item.conquistasKeys.map((conquistaKey, idx) => (
+                    <li key={idx}>{t(conquistaKey)}</li>
                   ))}
                 </ul>
               </div>

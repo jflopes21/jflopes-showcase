@@ -1,5 +1,5 @@
 interface NavItem {
-  label: string;
+  key: keyof (typeof import('../messages/pt-br.json'))['Navigation'];
   href: string;
 }
 
@@ -7,10 +7,10 @@ interface NavItem {
  * @description Itens de navegação para o PillNav. Usamos #ids das seções.
  */
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Início', href: '#top' },
-  { label: 'Sobre', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Experiência', href: '#experience' },
-  { label: 'Formação', href: '#education' },
-  { label: 'Contato', href: '#contact' },
+  { key: 'home', href: '#top' },
+  { key: 'about', href: '#about' },
+  { key: 'skills', href: '#skills' },
+  { key: 'experience', href: '#experience' },
+  { key: 'education', href: '#education' },
+  { key: 'contact', href: '#contact' },
 ];

@@ -3,9 +3,7 @@
  */
 export const CONTACT_INFO = {
   EMAIL: 'joaofrancisco21@yahoo.com.br',
-  EMAIL_DISPLAY: 'E-mail',
   PHONE: '+5544997133696',
-  PHONE_DISPLAY: 'Telefone',
 };
 
 /**
@@ -18,9 +16,13 @@ export const SOCIAL_LINKS = {
 };
 
 /**
- * @description Frases de apoio e Call To Action (CTA) para a seção de Contato.
+ * @description Chaves de tradução para a seção de Contato.
  */
-export const CONTACT_TEXTS = {
-  CTA: 'Vamos Construir o Próximo Projeto?',
-  SUPPORT: 'Entre em contato para discutir projetos e oportunidades.',
+export const CONTACT_KEYS = {
+  CTA: 'cta',
+  SUPPORT: 'support',
+  EMAIL_DISPLAY: 'email_display',
+  PHONE_DISPLAY: 'phone_display',
+  GITHUB_NAME: 'github_name',
+  LINKEDIN_NAME: 'linkedin_name',
 };

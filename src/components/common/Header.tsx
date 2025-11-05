@@ -2,9 +2,11 @@
 
 import PillNav from '@/components/ui/PillNav';
 import { NAV_ITEMS } from '@/constants/nav-data.constants';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
+import { useTranslations } from 'next-intl';
 
 export function Header() {
+  const t = useTranslations('Navigation');
   const [activeHash, setActiveHash] = useState('#top');
 
   useEffect(() => {
@@ -28,10 +30,17 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const translatedNavItems = useMemo(() => {
+    return NAV_ITEMS.map((item) => ({
+      label: t(item.key),
+      href: item.href,
+    }));
+  }, [t]);
+
   return (
     <div className="fixed top-6 z-999 hidden w-full justify-center p-4 md:flex">
       <PillNav
-        items={NAV_ITEMS}
+        items={translatedNavItems}
         activeHref={activeHash}
         className="mx-auto"
         baseColor="#171717"

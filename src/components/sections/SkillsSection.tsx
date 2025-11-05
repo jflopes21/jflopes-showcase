@@ -7,8 +7,11 @@ import {
   SKILLS_LOGOS,
   INFRASTRUCTURE_LOGOS,
 } from '@/constants/skills-data.constants';
+import { useTranslations } from 'next-intl';
 
 export function SkillsSection() {
+  const t = useTranslations('SkillsSection');
+
   const floatIn = {
     initial: { opacity: 0, y: 50 },
     whileInView: { opacity: 1, y: 0 },
@@ -34,7 +37,7 @@ export function SkillsSection() {
             animationSpeed={3}
             className="mb-12 text-center text-5xl"
           >
-            Tecnologias & Skills
+            {t('title')}
           </GradientText>
           <div className="flex flex-col gap-8">
             <div className="relative z-10 h-24 w-full">
@@ -47,7 +50,7 @@ export function SkillsSection() {
                 scaleOnHover
                 pauseOnHover={false}
                 fadeOut
-                ariaLabel="Tecnologias de desenvolvimento utilizadas"
+                ariaLabel={t('devAriaLabel')}
               />
             </div>
 
@@ -61,7 +64,7 @@ export function SkillsSection() {
                 scaleOnHover
                 pauseOnHover={false}
                 fadeOut
-                ariaLabel="Tecnologias de infraestrutura utilizadas"
+                ariaLabel={t('infraAriaLabel')}
               />
             </div>
           </div>

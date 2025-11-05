@@ -1,5 +1,6 @@
 'use client';
 import { Header } from '@/components/common/Header';
+import { LanguageSwitcher } from '@/components/common/LanguageSwitcher';
 import { ScrollIndicator } from '@/components/common/ScrollIndicator';
 import { AboutSection } from '@/components/sections/AboutSection';
 import { ContactSection } from '@/components/sections/ContactSection';
@@ -13,6 +14,10 @@ export default function Home() {
   return (
     <main className="relative flex flex-col items-center">
       <Header />
+
+      <div className="fixed top-8 right-6 z-1000">
+        <LanguageSwitcher />
+      </div>
 
       <div className="fixed inset-0 z-0 h-full w-full">
         <Particles
