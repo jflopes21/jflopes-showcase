@@ -90,7 +90,7 @@ Certifique-se de ter instalado:
 
 ### Rotas de Idioma
 
-Para testar as diferentes traduções, acesse as seguintes rotas:
+Para testar as diferentes traduções, acesse as seguintes rotas: testeeeeee
 
 | Idioma                  | Rota     |
 | :---------------------- | :------- |
