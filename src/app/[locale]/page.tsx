@@ -8,6 +8,7 @@ import { EducationSection } from '@/components/sections/EducationSection';
 import { ExperienceSection } from '@/components/sections/ExperienceSection';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { SkillsSection } from '@/components/sections/SkillsSection';
+import { ProjectsSection } from '@/components/sections/ProjectsSection';
 import Particles from '@/components/ui/Particles';
 
 export default function Home() {
@@ -36,6 +37,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <SkillsSection />
+        <ProjectsSection />
         <ExperienceSection />
         <EducationSection />
         <ContactSection />

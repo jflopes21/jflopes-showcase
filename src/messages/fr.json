@@ -3,6 +3,7 @@
     "home": "Accueil",
     "about": "À propos",
     "skills": "Compétences",
+    "projects": "Projets",
     "experience": "Expérience",
     "education": "Formation",
     "contact": "Contact"
@@ -19,6 +20,13 @@
     "title": "Technologies & Compétences",
     "devAriaLabel": "Technologies de développement utilisées",
     "infraAriaLabel": "Technologies d'infrastructure utilisées"
+  },
+  "ProjectsSection": {
+    "title": "Projets en Vedette",
+    "imobijud_desc": "Plateforme spécialisée dans la gestion et l'automatisation des processus juridiques immobiliers.",
+    "kairos_desc": "Système de gestion axé sur l'optimisation des flux de travail et de la productivité.",
+    "nossofilme_desc": "E-commerce de posters personnalisés style cinéma pour immortaliser les moments des couples.",
+    "faltauma_desc": "Application destinée aux collectionneurs pour gérer l'échange de vignettes d'albums de football."
   },
   "ExperienceSection": {
     "title": "Expérience Professionnelle",
@@ -55,6 +63,6 @@
     "linkedin_name": "LinkedIn"
   },
   "Global": {
-    "copied": "{item} copié!"
+    "copied": "{item} copiado!"
   }
 }

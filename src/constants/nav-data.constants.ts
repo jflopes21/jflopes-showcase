@@ -10,6 +10,7 @@ export const NAV_ITEMS: NavItem[] = [
   { key: 'home', href: '#top' },
   { key: 'about', href: '#about' },
   { key: 'skills', href: '#skills' },
+  { key: 'projects', href: '#projects' },
   { key: 'experience', href: '#experience' },
   { key: 'education', href: '#education' },
   { key: 'contact', href: '#contact' },

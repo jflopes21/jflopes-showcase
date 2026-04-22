@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About",
     "skills": "Skills",
+    "projects": "Projects",
     "experience": "Experience",
     "education": "Education",
     "contact": "Contact"
@@ -19,6 +20,13 @@
     "title": "Technologies & Skills",
     "devAriaLabel": "Development technologies used",
     "infraAriaLabel": "Infrastructure technologies used"
+  },
+  "ProjectsSection": {
+    "title": "Featured Projects",
+    "imobijud_desc": "Platform specialized in the management and automation of real estate legal processes.",
+    "kairos_desc": "Management system focused on streamlining workflows and productivity.",
+    "nossofilme_desc": "E-commerce for personalized cinema-style posters to immortalize couples' moments.",
+    "faltauma_desc": "Application for collectors to manage the exchange of football album stickers."
   },
   "ExperienceSection": {
     "title": "Professional Experience",

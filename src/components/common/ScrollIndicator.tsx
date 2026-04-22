@@ -5,7 +5,14 @@ import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const SECTION_IDS = ['about', 'skills', 'experience','education', 'contact'];
+const SECTION_IDS = [
+  'about',
+  'skills',
+  'projects',
+  'experience',
+  'education',
+  'contact',
+];
 
 export function ScrollIndicator() {
   const [isVisible, setIsVisible] = useState(false);
@@ -62,7 +69,7 @@ export function ScrollIndicator() {
         variant="outline"
         size="icon"
         onClick={handleScroll}
-        className="h-12 w-12 rounded-full border-2 border-lime-400 bg-transparent hover:bg-neutral-800 hover:cursor-pointer"
+        className="h-12 w-12 rounded-full border-2 border-lime-400 bg-transparent hover:cursor-pointer hover:bg-neutral-800"
       >
         <ChevronDown className="h-6 w-6 animate-bounce text-lime-400" />
       </Button>
